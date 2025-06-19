@@ -21,3 +21,14 @@ card.userName = "jeyel";
 
 
 console.log(card)
+
+interface Iuser {
+  email: string;
+  password: string;
+  name: string;
+}
+
+interface IcardUser extends Iuser {
+  gender: string;
+  age: number;
+}
