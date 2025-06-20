@@ -68,28 +68,57 @@
 // myUser.setSalary(400)
 // console.log(myUser);
 
-type Role = "ui" | "back" | "front";
+// type Role = "ui" | "back" | "front";
 
-class InformUser {
-  constructor(public id: number, name: string) {}
+// class InformUser {
+//   constructor(public id: number, name: string) {}
+// }
+// class UserCard extends InformUser {
+//   constructor(
+//     public id: number,
+//     public name: string,
+//     public salary: number,
+//     public gender: string,
+//     public role: Role
+//   ) {
+//     super(id, name);
+//   }
+//   setSalary(cutSalary: number): void {
+//     const newSalary = this.salary - cutSalary;
+//     this.salary = newSalary;
+//   }
+// }
+// const userInform = new UserCard(1, "Seth", 5000, "male", "back");
+// userInform.setSalary(2500)
+// console.log(userInform);
+
+// const num = 444;
+
+// export {};
+
+type Position = "Fronte-end" | "Backe-end" | "Design";
+
+class UserInform {
+  constructor(id: number, name: string) {}
 }
-class UserCard extends InformUser {
-  constructor(
-    public id: number,
-    public name: string,
-    public salary: number,
-    public gender: string,
-    public role: Role
-  ) {
-    super(id, name);
+
+class CardUser extends UserInform {
+  constructor(public id: number, public name:string, public age: number, public gender: string, public salary: number, public role: Position) {
+    super (id, name)
   }
-  setSalary(cutSalary: number): void {
+  setSalary(cutSalary: number):void {
     const newSalary = this.salary - cutSalary;
     this.salary = newSalary;
   }
 }
-const userInform = new UserCard(1, "Seth", 5000, "male", "back");
-userInform.setSalary(2500)
-console.log(userInform);
 
-export {};
+const userResult = new CardUser(1, "Seth", 20, "male", 5000, "Backe-end")
+userResult.setSalary(3000)
+console.log(userResult)
+
+const arr: number[] = [1,2,3,4,5]
+const i: number = 0;
+
+for (let i = 0 ; i <= arr.length; i++) {
+  console.log(arr[i])
+}
